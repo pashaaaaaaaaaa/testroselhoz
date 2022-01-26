@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="big-block">
+            <div class="oneblock">
+                <h1>Расчет Доходности по вкладу</h1>
+                <p class="text">Сумма вклада</p>
+                <input type="number" value="10000" min="10000" max="10000000" id="deposit" onchange="calc(this)" class="inp-one"/>
+                <input type="range" value="10000" min="10000" max="10000000" onchange="deposit(this)" class="range"/>
+                    <div class="wrapper">
+                        <div class="one-small">
+                        <p class="text">Выплата процентов</p>
+                            <div class="btn">
+                                <button class="one-btn">Ежемсячно</button>
+                                <button class="two-btn">В конце срока</button>
+                            </div>
+                        </div>
+                        <div class="one-small">
+                            <p class="text">Срок вклада</p>
+                            <div class="btn">
+                                <button class="btn1">2 года</button>
+                                <button class="btn2">3 года</button>
+                            </div>
+                        </div>
+                    </div>
+                <p class="text-online">*Расчет по вкладу является предварителым при условии открытия вклада онлайн</p>
+                <p class="txt-green">Подробные условия</p>
+            </div>
+            <div class="twoblock">
+                <p class="text">Процентная ставка</p>
+                <div value=0.062 class="tax">
+                    6.20%
+                </div>
+                <p class="text">Доход</p>
+                <div value="1240 рублей" id="income">
+                    1240 рублей
+                </div>
+                <p class="text">Сумма в конце срока*</p>
+                <div  value="11240 рублей" id="total">
+                    11240 рублей
+                </div>
+                <button class="orange-btn">Оставить заявку</button>
+            </div>
+        </div>
+        <form class="info-user">
+            <h1>Заявка на открытие вклада</h1>
+            <input placeholder="Фамилия*" class="firstname" name="firstname" required/>
+            <input placeholder="Имя*" class="lastname" name="lastname" required/>
+            <input placeholder="Отчество*" class="patronymic" name="patronymic" required/>
+            <input placeholder="Дата рождение*"  class="birth" type="date" name="birth" required/>
+            <div class="wr">
+                <span class="span">телефон</span>
+                <input  type="tel" class="tel" name="tel" data-format="+7 (ddd) ddd-dd-dd"/>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="phone" checked ><p>Я подтверждаю согласие на обработку <span class="spangreen">персональных данных</span></p>
+            </div>
+
+            <button class="orange-btn" onclick="send(this)"  type="button">Оставить заявку</button>
+        </form>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
